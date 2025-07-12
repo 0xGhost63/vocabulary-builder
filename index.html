@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Vocabulary Builder</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://tse4.mm.bing.net/th/id/OIP.pZfCigNKShAcLUygRZ5WOwHaJ4?rs=1&pid=ImgDetMain&o=7&rm=3" type="image/png">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Open+Sans&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Vocabulary Builder</h1>
+
+  <div class="form-section">
+    <div class="toggle-container">
+      <span class="toggle-label-text">Toggle Dark Mode</span>
+      <label class="switch">
+        <input type="checkbox" id="darkModeToggle" onchange="toggleDarkMode()" />
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <input type="text" id="date" placeholder="Enter today's date">
+    <input type="text" id="word" placeholder="Enter a new word">
+    <textarea id="meaning" placeholder="Enter the meaning"></textarea>
+    <button onclick="addWord()">Add Word</button>
+    <button onclick="downloadFile()">Download</button>
+    <select id="filterDate" onchange="renderWords()">
+      <option value="">-- Filter by Date --</option>
+    </select>
+  </div>
+
+  <div id="entryList" class="form-section">
+    <h2 style="font-family: 'Inter', sans-serif; font-weight: 800; font-size: 1.2rem; margin-bottom: 15px;">📅 Today's Entries:</h2>
+    <div id="wordsDisplay"></div>
+  </div>
+
+  <!-- External JS -->
+  <script src="script.js"></script>
+</body>
+</html>
